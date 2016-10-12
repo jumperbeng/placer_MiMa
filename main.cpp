@@ -47,6 +47,7 @@ int main(){
 
 	cout<<"All codes have been tested by Jumper WANG"<<endl;
 	cout<<"The functions related to the cost are not implemented yet."<<endl;
+    cout<<"added by Keren, for testing git push."<<endl;
 	return 0;
 }
 

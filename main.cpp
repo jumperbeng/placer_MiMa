@@ -45,9 +45,42 @@ int main(){
 	}
 	*/
 
+
+    /*
+     * The following is to test the input with Site class
+     */
+
+     Site** sitemap = readSitemap_siteClass("FPGA-example1.sitemap");
+
+
+    vector<Cell> cellRecord;
+    readPl_siteClass("FPGA-example1.pl",cellRecord, sitemap);
+    /*
+    cout<<cellRecord.size()<<endl;
+    for(int p=0;p<cellRecord.size();p++){
+        cout<<cellRecord[p].getIndex()<<endl;
+    }
+    */
+    int filledNum = 0;
+    int unfilledNum = 0;
+    for(int j=0;j<168;j++){//jth row
+        for(int i=0;i<168;i++){//ith column
+            if (sitemap[i][j].getFill())
+                filledNum++;
+            else
+                unfilledNum++;
+        }
+
+    }
+    printf("%d of sites filled, %d unfilled, total %d sites\n", filledNum, unfilledNum, filledNum+unfilledNum);
+
+
+
+
+
 	cout<<"All codes have been tested by Jumper WANG"<<endl;
 	cout<<"The functions related to the cost are not implemented yet."<<endl;
-    cout<<"added by Keren, for testing git push."<<endl;
+    cout<<"site class tested by Keren Zhu"<<endl;
 	return 0;
 }
 

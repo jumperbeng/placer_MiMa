@@ -25,6 +25,7 @@ using namespace std;
 #include "Cell.h"
 #include "Net.h"
 #include "readFile.h"
+#include "site.h"
 
 enum type {CLB, DSP, RAM, IO, INVALID};
 enum FM {FIXED, MOVED};
